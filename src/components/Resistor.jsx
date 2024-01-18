@@ -14,9 +14,9 @@ let Resistor = () => {
   const [tolerance, setTolerance] = useState("");
 
   return (
-    <div className="bg-slate-800 mx-0">
-      <div className="bg-slate-200 py-4 mx-0 lg:mx-24">
-        <div className="bg-orange-200 rounded-2xl border-2 border-slate-800 h-[74px] w-[260px] mx-auto relative">
+
+      <div className="flex flex-wrap justify-center gap-20 bg-slate-200 lg:pt-16 pb-16">
+        <div className="bg-orange-200 rounded-2xl border-2 border-slate-800 h-[74px] w-[260px] mt-8 lg:mt-24 relative">
           <div
             className={`${bg1[value1]} h-[70px] w-[25px] left-[20px] absolute`}
           ></div>
@@ -32,13 +32,17 @@ let Resistor = () => {
           <div
             className={`${bg5[tolerance]} h-[70px] w-[25px] left-[210px] absolute`}
           ></div>
-        </div>
-        <p className="font-bold text-3xl text-center my-4">{`R = ${formatNumber(
+           <p className="font-bold text-3xl text-center mt-24">{`R = ${formatNumber(
           (value1 + value2 + value3) * multiplier
         )}Ω ${tolerance}`}</p>
+
+        
+        </div>
+
+       
         <div className="flex flex-wrap justify-center gap-2">
           <div className="bg-slate-300 p-2 w-[100px]">
-            <p>Band 1</p>
+            <p className="font-bold text-center pl-4 pb-2">Band 1</p>
             <div className="flex items-center mb-1">
               <input
                 id="red-radio"
@@ -222,7 +226,7 @@ let Resistor = () => {
           </div>
 
           <div className="bg-slate-300 p-2 w-[100px]">
-            <p>Band 2</p>
+            <p className="font-bold text-center pl-4 pb-2">Band 2</p>
             <div className="flex items-center mb-1">
               <input
                 id="red-radio"
@@ -406,7 +410,7 @@ let Resistor = () => {
           </div>
 
           <div className="bg-slate-300 p-2 w-[100px]">
-            <p>Band 3</p>
+            <p className="font-bold text-center pl-4 pb-2">Band 3</p>
             <div className="flex items-center mb-1">
               <input
                 id="red-radio"
@@ -590,7 +594,7 @@ let Resistor = () => {
           </div>
 
           <div className="bg-slate-300 p-2 w-[100px]">
-            <p>Band 4</p>
+            <p className="font-bold text-center pl-4 pb-2">Band 4</p>
             <div className="flex items-center mb-1">
               <input
                 id="red-radio"
@@ -810,7 +814,7 @@ let Resistor = () => {
           </div>
 
           <div className="bg-slate-300 p-2 w-[100px]">
-            <p>Band 5</p>
+            <p className="font-bold text-center pl-4 pb-2">Band 5</p>
             <div className="flex items-center mb-1">
               <input
                 id="red-radio"
@@ -994,7 +998,7 @@ let Resistor = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
