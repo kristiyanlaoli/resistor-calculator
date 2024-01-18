@@ -64,7 +64,7 @@ let Resistor = () => {
               selectedBand === "band3" ? "hidden" : ""
             }`}
           ></div>
-          <p className="font-bold text-3xl text-center mt-24">{`R = ${formatNumber(
+          <p className="font-bold text-2xl text-center mt-24">{`R = ${formatNumber(
             (value1 + value2 + value3) * multiplier
           )}Ω ${tolerance}`}</p>
         </div>
