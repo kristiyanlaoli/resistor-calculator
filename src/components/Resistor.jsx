@@ -72,7 +72,7 @@ let Resistor = () => {
 
       <div className="flex flex-wrap justify-center gap-2">
         <div
-          className={`bg-slate-300 p-2 w-[100px] ${
+          className={`bg-slate-300 p-2 w-[100px] rounded-md ${
             selectedBand === "band4" || selectedBand === "band3" ? "hidden" : ""
           }`}
         >
@@ -258,7 +258,7 @@ let Resistor = () => {
           </div>
         </div>
 
-        <div className="bg-slate-300 p-2 w-[100px]">
+        <div className="bg-slate-300 rounded-md p-2 w-[100px]">
           <div className="flex items-center mb-1">
             <input
               id="red-radio"
@@ -441,7 +441,7 @@ let Resistor = () => {
           </div>
         </div>
 
-        <div className="bg-slate-300 p-2 w-[100px]">
+        <div className="bg-slate-300 rounded-md p-2 w-[100px]">
           <div className="flex items-center mb-1">
             <input
               id="red-radio"
@@ -624,7 +624,7 @@ let Resistor = () => {
           </div>
         </div>
 
-        <div className="bg-slate-300 p-2 w-[100px]">
+        <div className="bg-slate-300 rounded-md p-2 w-[100px]">
           <div className="flex items-center mb-1">
             <input
               id="red-radio"
@@ -844,7 +844,7 @@ let Resistor = () => {
         </div>
 
         <div
-          className={`bg-slate-300 p-2 w-[100px] ${
+          className={`bg-slate-300 rounded-md p-2 w-[100px] ${
             selectedBand === "band3" ? "hidden" : ""
           }`}
         >
