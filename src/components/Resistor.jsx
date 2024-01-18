@@ -1,5 +1,10 @@
 import { useState } from "react";
 import formatNumber from "../utils/formatNumber";
+import bg1 from "../utils/bg1";
+import bg2 from "../utils/bg2";
+import bg3 from "../utils/bg3";
+import bg4 from "../utils/bg4";
+import bg5 from "../utils/bg5";
 
 let Resistor = () => {
   const [value1, setValue1] = useState(0);
@@ -7,20 +12,31 @@ let Resistor = () => {
   const [value3, setValue3] = useState(0);
   const [multiplier, setMultiplier] = useState(1);
   const [tolerance, setTolerance] = useState("");
+
   return (
-    <div className="bg-slate-400 mx-0">
+    <div className="bg-slate-800 mx-0">
       <div className="bg-slate-200 py-4 mx-0 lg:mx-24">
-        <div className="bg-orange-200 rounded-2xl h-[70px] w-[260px] mx-auto relative">
-          <div className="bg-red-500 h-[70px] w-[20px] left-[20px] absolute"></div>
-          <div className="bg-red-500 h-[70px] w-[20px] left-[60px] absolute"></div>
-          <div className="bg-red-500 h-[70px] w-[20px] left-[100px] absolute"></div>
-          <div className="bg-red-500 h-[70px] w-[20px] left-[140px] absolute"></div>
-          <div className="bg-red-500 h-[70px] w-[20px] left-[220px] absolute"></div>
+        <div className="bg-orange-200 rounded-2xl border-2 border-slate-800 h-[74px] w-[260px] mx-auto relative">
+          <div
+            className={`${bg1[value1]} h-[70px] w-[25px] left-[20px] absolute`}
+          ></div>
+          <div
+            className={`${bg2[value2]} h-[70px] w-[25px] left-[60px] absolute`}
+          ></div>
+          <div
+            className={`${bg3[value3]} h-[70px] w-[25px] left-[100px] absolute`}
+          ></div>
+          <div
+            className={`${bg4[multiplier]} h-[70px] w-[25px] left-[140px] absolute`}
+          ></div>
+          <div
+            className={`${bg5[tolerance]} h-[70px] w-[25px] left-[210px] absolute`}
+          ></div>
         </div>
-        <p>{`R = ${formatNumber(
+        <p className="font-bold text-3xl text-center my-4">{`R = ${formatNumber(
           (value1 + value2 + value3) * multiplier
         )}Ω ${tolerance}`}</p>
-        <div className="flex gap-2 mt-4">
+        <div className="flex flex-wrap justify-center gap-2">
           <div className="bg-slate-300 p-2 w-[100px]">
             <p>Band 1</p>
             <div className="flex items-center mb-1">
@@ -194,7 +210,7 @@ let Resistor = () => {
                   setValue1(900);
                 }}
                 name="band-1"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-neutral-500 bg-gray-100 border-gray-300 focus:ring-neutral-600  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -378,7 +394,7 @@ let Resistor = () => {
                   setValue2(90);
                 }}
                 name="band-2"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-neutral-500 bg-gray-100 border-gray-300 focus:ring-neutral-500  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -562,7 +578,7 @@ let Resistor = () => {
                   setValue3(9);
                 }}
                 name="band-3"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-neutral-500 bg-gray-100 border-gray-300 focus:ring-neutral-500  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -746,7 +762,7 @@ let Resistor = () => {
                   setMultiplier(1000000000);
                 }}
                 name="band-4"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-neutral-500 bg-gray-100 border-gray-300 focus:ring-neutral-500  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -764,7 +780,7 @@ let Resistor = () => {
                   setMultiplier(0.1);
                 }}
                 name="band-4"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-[#cfb53b] bg-gray-100 border-gray-300 focus:ring-[#cfb53b]  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -782,7 +798,7 @@ let Resistor = () => {
                   setMultiplier(0.01);
                 }}
                 name="band-4"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-neutral-500 bg-gray-100 border-gray-300 focus:ring-neutral-500  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -948,7 +964,7 @@ let Resistor = () => {
                   setTolerance("± 5%");
                 }}
                 name="band-5"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-[#cfb53b] bg-gray-100 border-gray-300 focus:ring-[#cfb53b]  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
@@ -966,7 +982,7 @@ let Resistor = () => {
                   setTolerance("± 10%");
                 }}
                 name="band-5"
-                className="w-4 h-4 text-neutral-50 bg-gray-100 border-gray-300 focus:ring-neutral-50  focus:ring-2"
+                className="w-4 h-4 text-neutral-500 bg-gray-100 border-gray-300 focus:ring-neutral-500  focus:ring-2"
               ></input>
               <label
                 htmlFor="red-radio"
