@@ -2,7 +2,7 @@ import SvgVisit from "./SvgVisit";
 
 const Footer = () => {
   return (
-    <>
+    <footer>
       <p className="flex justify-center items-center font-medium text-sm text-slate-600 text-center">
         Coded with ❤️ by
         <a
@@ -14,7 +14,7 @@ const Footer = () => {
           <SvgVisit />
         </a>
       </p>
-    </>
+    </footer>
   );
 };
 

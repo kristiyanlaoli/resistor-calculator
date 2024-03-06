@@ -5,11 +5,11 @@ import Resistor from "./components/Resistor";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Header />
       <Resistor />
       <Footer />
-    </>
+    </div>
   );
 }
 
